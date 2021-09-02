@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/admin.iml" filepath="$PROJECT_DIR$/admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/admin-core/admin-core.iml" filepath="$PROJECT_DIR$/admin-core/admin-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/admin-web/admin-web.iml" filepath="$PROJECT_DIR$/admin-web/admin-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/show-web/show-web.iml" filepath="$PROJECT_DIR$/show-web/show-web.iml" />
     </modules>
   </component>
 </project>

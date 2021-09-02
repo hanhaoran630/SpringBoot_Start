@@ -3,24 +3,31 @@ package top.hanhaoran.admin.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import top.hanhaoran.admin.core.entity.User;
+import org.springframework.web.bind.annotation.ResponseBody;
 import top.hanhaoran.admin.core.service.UserService;
+import top.hanhaoran.admin.web.config.Auth;
 
 @Controller
 public class IndexController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/")
-    public String index(ModelMap modelMap){
-        User user=new User();
-        user.setUsername("213");
-        user.setPassword("123");
-        userService.insert(user);
-        modelMap.addAttribute("msg",userService.getAll());
+    @ResponseBody
+    @GetMapping(value = "api/users")
+    @Auth()
+    public String index(){
 
-        return "index";
+        return userService.getAll();
     }
+
+    @ResponseBody
+    @GetMapping(value = "api/login")
+    @Auth(NeedLogin = false)
+    public String login(){
+
+        return userService.getAll();
+    }
+
 }
