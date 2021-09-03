@@ -1,10 +1,11 @@
-package top.hanhaoran.admin.web.config;
+package top.hanhaoran.admin.util.interceptor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import top.hanhaoran.admin.web.interceptor.AuthInterceptor;
+import top.hanhaoran.admin.util.interceptor.AuthInterceptor;
 
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
@@ -14,7 +15,12 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(authInterceptor).addPathPatterns("/**");
+        registry.addInterceptor(authInterceptor).addPathPatterns("/**")
+                .excludePathPatterns("/doc.html")
+                .excludePathPatterns("/service-worker.js")
+                .excludePathPatterns("/swagger-resources")
+                .excludePathPatterns("/webjars/**");
+
     }
 
 }

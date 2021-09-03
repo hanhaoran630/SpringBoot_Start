@@ -4,72 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab27c299-61a3-44c7-87a5-d7a5ce0e3b06" name="更改" comment="分层架构">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_78.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/config/Auth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/config/InterceptorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/interceptor/AuthInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-web/src/main/resources/application-prod.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/show-web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/show-web/show-web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/static/css/app.5c9713c3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/static/img/logo.82b9c7a5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/static/js/about.1102a9f2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/static/js/about.1102a9f2.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/static/js/app.2000035a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/static/js/app.2000035a.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/static/js/chunk-vendors.65c1bec6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/dist/static/js/chunk-vendors.65c1bec6.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-web/vue.config.js" afterDir="false" />
+    <list default="true" id="ab27c299-61a3-44c7-87a5-d7a5ce0e3b06" name="更改" comment="增加redis和拦截器">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_xiaoymin_knife4j_annotations_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_xiaoymin_knife4j_core_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_xiaoymin_knife4j_spring_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_xiaoymin_knife4j_spring_boot_autoconfigure_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_xiaoymin_knife4j_spring_boot_starter_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_xiaoymin_knife4j_spring_ui_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_classgraph_classgraph_4_1_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_bean_validators_2_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_webmvc_2_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_25_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_3_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/bo/UserBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-core/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/SmartBeanUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/handler/SmartGlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginDetailVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginFormDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginTokenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/RequestTokenBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/response/ResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/response/codeconst/ResponseCodeConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/response/codeconst/UserResponseCodeConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/swagger/Knife4jConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/util.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-core/admin-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/admin-core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/dao/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/admin-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/admin-web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/config/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/interceptor/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/interceptor/InterceptorConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/interceptor/AuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/interceptor/AuthInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/resources/templates/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/classes/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/classes/templates/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/target/classes/top/hanhaoran/admin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/classes/top/hanhaoran/admin/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/target/classes/top/hanhaoran/admin/web/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/classes/top/hanhaoran/admin/web/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/surefire-reports/TEST-top.hanhaoran.admin.SampleTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/surefire-reports/top.hanhaoran.admin.SampleTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/target/test-classes/top/hanhaoran/admin/SampleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/test-classes/top/hanhaoran/admin/SampleTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/admin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-web/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-web/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-web/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/show-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/show-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/show-web/show-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/show-web/show-web.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,16 +108,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/interceptor" />
-    <property name="project.structure.last.edited" value="模块" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin-core/src/main/resources/mapper" />
+    <property name="project.structure.last.edited" value="项目" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\Java\SpringBoot_Vue\admin-core\src\main\resources\mapper" />
       <recent name="D:\Project\Java\SpringBoot_Vue\admin-web\src\main\java\top\hanhaoran\admin\web\interceptor" />
       <recent name="D:\Project\Java\SpringBoot_Vue" />
       <recent name="D:\Project\Java\SpringBoot_Vue\admin-web\src\main\resources" />
@@ -128,10 +135,11 @@
       <recent name="top.hanhaoran.admin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="top.hanhaoran.admin.web.interceptor.login" />
-      <recent name="top.hanhaoran.admin.web.interceptor.login.domain" />
-      <recent name="top.hanhaoran.admin.web.interceptor" />
-      <recent name="top.hanhaoran.admin.web.config" />
+      <recent name="top.hanhaoran.admin.util.handler" />
+      <recent name="top.hanhaoran.admin.util" />
+      <recent name="top.hanhaoran.admin.util.login" />
+      <recent name="top.hanhaoran.admin.util.response.codeconst" />
+      <recent name="top.hanhaoran.admin.util.response" />
     </key>
   </component>
   <component name="RunManager" selected="应用程序.App">
@@ -211,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630402209052</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="增加redis和拦截器">
+      <created>1630574882783</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1630574882783</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,6 +246,35 @@
     <MESSAGE value="从零开始的springboot后台管理项目" />
     <MESSAGE value="测试" />
     <MESSAGE value="分层架构" />
-    <option name="LAST_COMMIT_MESSAGE" value="分层架构" />
+    <MESSAGE value="增加redis和拦截器" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加redis和拦截器" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginTokenService.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginTokenService.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/handler/SmartGlobalExceptionHandler.java</url>
+          <line>40</line>
+          <properties class="top.hanhaoran.admin.util.handler.SmartGlobalExceptionHandler" method="exceptionHandler">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

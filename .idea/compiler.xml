@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="show-web" />
-        <module name="admin-core" />
         <module name="admin-web" />
+        <module name="util" />
+        <module name="admin-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,13 +18,16 @@
       <module name="admin-core" target="1.8" />
       <module name="admin-web" target="1.8" />
       <module name="show-web" target="1.8" />
+      <module name="util" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="" />
       <module name="admin-core" options="-parameters" />
       <module name="admin-web" options="-parameters" />
       <module name="show-web" options="-parameters" />
+      <module name="util" options="-parameters" />
     </option>
   </component>
 </project>

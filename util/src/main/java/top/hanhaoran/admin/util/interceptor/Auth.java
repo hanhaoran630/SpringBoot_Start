@@ -1,4 +1,4 @@
-package top.hanhaoran.admin.web.config;
+package top.hanhaoran.admin.util.interceptor;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

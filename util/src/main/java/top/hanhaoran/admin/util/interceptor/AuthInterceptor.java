@@ -1,9 +1,8 @@
-package top.hanhaoran.admin.web.interceptor;
+package top.hanhaoran.admin.util.interceptor;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
-import top.hanhaoran.admin.web.config.Auth;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,10 +12,13 @@ public class AuthInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        HandlerMethod method = (HandlerMethod) handler;
+        HandlerMethod handlerMethod = (HandlerMethod) handler;
 
-        Auth auth = method.getMethodAnnotation(Auth.class);
+        Auth auth = handlerMethod.getMethodAnnotation(Auth.class);
 
+        if(handlerMethod.getBean().getClass().getName().equals("springfox.documentation.swagger.web.ApiResourceController")){
+            return  true;
+        }
         if(auth.NeedLogin()){
             response.setContentType("application/json; charset=utf-8");
 
