@@ -8,7 +8,8 @@ import top.hanhaoran.admin.core.dto.UserDTO;
 import top.hanhaoran.admin.core.entity.User;
 
 @Mapper
-public interface UserDao extends BaseMapper<User> {
+public interface UserMapper extends BaseMapper<User> {
 
     UserDTO login(@Param("loginName") String loginName, @Param("loginPwd") String loginPwd);
+
 }

@@ -1,11 +1,7 @@
-package top.hanhaoran.admin.util.login;
+package top.hanhaoran.admin.web.login;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * 登录返回DTO
@@ -23,7 +19,7 @@ public class LoginDetailVO {
     private String username;
 
     @ApiModelProperty("登陆token")
-    private String xAccessToken;
+    private String token;
 
 
 

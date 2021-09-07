@@ -1,11 +1,9 @@
-package top.hanhaoran.admin.util.interceptor;
+package top.hanhaoran.admin.web.interceptor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import top.hanhaoran.admin.util.interceptor.AuthInterceptor;
 
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {

@@ -1,4 +1,4 @@
-package top.hanhaoran.admin.util.login;
+package top.hanhaoran.admin.web.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -7,28 +7,17 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import top.hanhaoran.admin.core.bo.UserBO;
 import top.hanhaoran.admin.core.dto.UserDTO;
-import top.hanhaoran.admin.core.service.UserService;
+import top.hanhaoran.admin.core.service.IUserService;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.UUID;
 
-/**
- * [  ]
- *
- * @author yandanyang
- * @version 1.0
- * @company 1024lab.net
- * @copyright (c) 2019 1024lab.netInc. All rights reserved.
- * @date
- * @since JDK1.8
- */
 @Slf4j
 @Service
-public class LoginTokenService {
+public class LoginTokenService{
 
     /**
      * 过期时间一天
@@ -43,7 +32,7 @@ public class LoginTokenService {
     private String jwtKey;
 
     @Autowired
-    private UserService userService;
+    private IUserService userService;
 
 
     /**
@@ -58,6 +47,8 @@ public class LoginTokenService {
         Long id = employeeDTO.getId();
         /**将token设置为jwt格式*/
         String baseToken = UUID.randomUUID().toString();
+
+        //两小时
         LocalDateTime localDateTimeNow = LocalDateTime.now();
         LocalDateTime localDateTimeExpire = localDateTimeNow.plusSeconds(EXPIRE_SECONDS);
         Date from = Date.from(localDateTimeNow.atZone(ZoneId.systemDefault()).toInstant());
@@ -80,7 +71,7 @@ public class LoginTokenService {
      * @auther yandanyang
      * @date 2018/9/12 0012 上午 10:11
      */
-    public RequestTokenBO getEmployeeTokenInfo(String token) {
+    public Long getEmployeeTokenInfo(String token) {
         Long userId = -1L;
         try {
             Claims claims = Jwts.parser().setSigningKey(jwtKey).parseClaimsJws(token).getBody();
@@ -91,13 +82,7 @@ public class LoginTokenService {
             return null;
         }
 
-        UserBO userBO = userService.getById(userId);
-        if (userBO == null) {
-            return null;
-        }
-
-
-        return new RequestTokenBO(userBO);
+        return userService.getById(userId)==null?null:userId;
     }
 
 }

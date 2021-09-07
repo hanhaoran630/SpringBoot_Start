@@ -3,23 +3,18 @@ package top.hanhaoran.admin;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import top.hanhaoran.admin.core.entity.User;
-import top.hanhaoran.admin.core.service.UserService;
+import top.hanhaoran.admin.util.redis.RedisUtil;
 
 @SpringBootTest
 public class SampleTest {
 
     @Autowired
-    private UserService userService;
+    private RedisUtil redisUtil;
 
     @Test
     public void testSelect() {
-        User user=new User();
-        user.setUsername("213");
-        user.setPassword("123");
-        System.out.println(userService.insert(user));
-        System.out.println(userService.getAll());
-
+        redisUtil.set("1", "1");
+        String a = (String) redisUtil.get("1");
     }
 
 }

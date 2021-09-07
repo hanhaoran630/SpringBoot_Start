@@ -1,13 +1,14 @@
-package top.hanhaoran.admin.util.login;
+package top.hanhaoran.admin.web.service;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import top.hanhaoran.admin.core.dao.UserDao;
+import top.hanhaoran.admin.core.dao.UserMapper;
 import top.hanhaoran.admin.core.dto.UserDTO;
 import top.hanhaoran.admin.util.SmartBeanUtil;
-import top.hanhaoran.admin.util.response.ResponseDTO;
-import top.hanhaoran.admin.util.response.codeconst.UserResponseCodeConst;
+import top.hanhaoran.admin.util.redis.RedisUtil;
+import top.hanhaoran.admin.util.response.ResponseInfo;
+import top.hanhaoran.admin.web.login.LoginDetailVO;
+import top.hanhaoran.admin.web.login.LoginFormDTO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -15,11 +16,13 @@ import javax.validation.Valid;
 @Service
 public class LoginService {
     @Autowired
-    private UserDao userDao;
+    private UserMapper userDao;
     @Autowired
     private LoginTokenService loginTokenService;
+    @Autowired
+    private RedisUtil redisUtil;
 
-    public ResponseDTO<LoginDetailVO> login(@Valid LoginFormDTO loginForm, HttpServletRequest request) {
+    public ResponseInfo<Object> login(@Valid LoginFormDTO loginForm, HttpServletRequest request) {
 //        String redisVerificationCode = redisValueOperations.get(loginForm.getCodeUuid());
 //        //增加删除已使用的验证码方式 频繁登录
 //        redisValueOperations.getOperations().delete(loginForm.getCodeUuid());
@@ -32,15 +35,17 @@ public class LoginService {
         String loginPwd = loginForm.getLoginPwd();
         UserDTO employeeDTO = userDao.login(loginForm.getLoginName(), loginPwd);
         if (null == employeeDTO) {
-            return ResponseDTO.wrap(UserResponseCodeConst.LOGIN_FAILED);
+            return ResponseInfo.error("该用户不存在");
         }
         //jwt token赋值
         String compactJws = loginTokenService.generateToken(employeeDTO);
 
-        LoginDetailVO loginDTO = SmartBeanUtil.copy(employeeDTO, LoginDetailVO.class);
+        LoginDetailVO loginDetailVO = SmartBeanUtil.copy(employeeDTO, LoginDetailVO.class);
 
-        loginDTO.setXAccessToken(compactJws);
+        loginDetailVO.setToken(compactJws);
 
-        return ResponseDTO.succData(loginDTO);
+        redisUtil.set(loginDetailVO.getId().toString(),loginDetailVO);
+
+        return ResponseInfo.successData(loginDetailVO);
     }
 }

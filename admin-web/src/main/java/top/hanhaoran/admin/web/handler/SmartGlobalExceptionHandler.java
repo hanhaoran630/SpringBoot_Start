@@ -1,5 +1,6 @@
-package top.hanhaoran.admin.util.handler;
+package top.hanhaoran.admin.web.handler;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.TypeMismatchException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -9,8 +10,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-import top.hanhaoran.admin.util.response.ResponseDTO;
-import top.hanhaoran.admin.util.response.codeconst.ResponseCodeConst;
+import top.hanhaoran.admin.util.response.ResponseUtil;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -38,32 +38,40 @@ public class SmartGlobalExceptionHandler {
      */
     @ResponseBody
     @ExceptionHandler(Exception.class)
-    public ResponseDTO exceptionHandler(Exception e) {
+    public String exceptionHandler(Exception e) {
         log.error("error:", e);
+
+        JSONObject jsonObject=new JSONObject();
+        jsonObject.put("code", ResponseUtil.ERROR);
 
         // http 请求方式错误
         if (e instanceof HttpRequestMethodNotSupportedException) {
-            return ResponseDTO.wrap(ResponseCodeConst.REQUEST_METHOD_ERROR);
+            jsonObject.put("msg","http 请求方式错误");
+
         }
 
         // 参数类型错误
         if (e instanceof TypeMismatchException) {
-            return ResponseDTO.wrap(ResponseCodeConst.ERROR_PARAM);
+            jsonObject.put("msg","参数类型错误");
+
         }
 
         // json 格式错误
         if (e instanceof HttpMessageNotReadableException) {
-            return ResponseDTO.wrap(ResponseCodeConst.JSON_FORMAT_ERROR);
+            jsonObject.put("msg","json 格式错误");
+
         }
 
         // 参数校验未通过
         if (e instanceof MethodArgumentNotValidException) {
             List<FieldError> fieldErrors = ((MethodArgumentNotValidException) e).getBindingResult().getFieldErrors();
             List<String> msgList = fieldErrors.stream().map(FieldError :: getDefaultMessage).collect(Collectors.toList());
-            return ResponseDTO.wrap(ResponseCodeConst.ERROR_PARAM, String.join(",", msgList));
+            jsonObject.put("msg","参数校验未通过:"+String.join(",", msgList));
+
         }
 
+        jsonObject.put("msg","系统错误");
 
-        return ResponseDTO.wrap(ResponseCodeConst.SYSTEM_ERROR);
+        return jsonObject.toJSONString();
     }
 }

@@ -23,7 +23,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="admin" options="" />
+      <module name="admin" options="-parameters" />
       <module name="admin-core" options="-parameters" />
       <module name="admin-web" options="-parameters" />
       <module name="show-web" options="-parameters" />

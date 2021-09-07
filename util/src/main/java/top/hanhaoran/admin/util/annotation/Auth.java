@@ -1,4 +1,4 @@
-package top.hanhaoran.admin.util.interceptor;
+package top.hanhaoran.admin.util.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -10,4 +10,5 @@ import java.lang.annotation.Target;
 public @interface Auth {
     boolean NeedLogin() default true;
     boolean NeedAuth() default true;
+    String NeedPower() default  "";
 }

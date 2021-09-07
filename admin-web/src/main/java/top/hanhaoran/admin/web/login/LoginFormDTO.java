@@ -1,4 +1,4 @@
-package top.hanhaoran.admin.util.login;
+package top.hanhaoran.admin.web.login;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
