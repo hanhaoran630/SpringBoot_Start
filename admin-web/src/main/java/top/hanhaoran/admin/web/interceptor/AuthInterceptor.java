@@ -9,7 +9,7 @@ import top.hanhaoran.admin.util.annotation.Auth;
 import top.hanhaoran.admin.util.redis.RedisUtil;
 import top.hanhaoran.admin.util.response.ResponseUtil;
 import top.hanhaoran.admin.web.login.LoginDetailVO;
-import top.hanhaoran.admin.web.service.LoginTokenService;
+import top.hanhaoran.admin.web.service.LoginService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,7 +22,7 @@ public class AuthInterceptor implements HandlerInterceptor {
     private String accessControlAllowOrigin;
 
     @Autowired
-    private LoginTokenService loginTokenService;
+    private LoginService loginService;
 
     @Autowired
     private RedisUtil redisUtil;
@@ -52,7 +52,7 @@ public class AuthInterceptor implements HandlerInterceptor {
         //shix
 
         //根据token获取登录用户
-        Long userId= loginTokenService.getEmployeeTokenInfo(xAccessToken);
+        Long userId= loginService.getTokenInfo(xAccessToken);
         if (null == userId) {
             ResponseUtil.loginError(response,"用户校验失败");
             return false;

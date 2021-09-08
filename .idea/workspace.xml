@@ -5,44 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab27c299-61a3-44c7-87a5-d7a5ce0e3b06" name="更改" comment="1">
-      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/interceptor/AuthInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/redis/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/redis/RedisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/response/ResponseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/controller/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/bo/UserBO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-core/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/test/java/top/hanhaoran/admin/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/test/java/top/hanhaoran/admin/SampleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/classes/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/classes/top/hanhaoran/admin/web/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/classes/top/hanhaoran/admin/web/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/target/test-classes/top/hanhaoran/admin/SampleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/test-classes/top/hanhaoran/admin/SampleTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/handler/SmartGlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/handler/SmartGlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/interceptor/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/annotation/Auth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/interceptor/AuthInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/interceptor/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/interceptor/InterceptorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginDetailVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginDetailVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginFormDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginFormDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/LoginTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/service/LoginTokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/login/RequestTokenBO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/response/ResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/response/ResponseInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/response/codeconst/ResponseCodeConst.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/java/top/hanhaoran/admin/util/response/codeconst/UserResponseCodeConst.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/util/util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/interceptor/AuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/interceptor/AuthInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/service/LoginTokenService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="所有位置" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/admin-core/src/main/resources/mapper" />
     <property name="project.structure.last.edited" value="项目" />
@@ -208,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630661474259</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1">
+      <created>1631007061954</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1631007061954</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
