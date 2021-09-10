@@ -38,8 +38,8 @@ public class LoginController extends BaseController {
     }
 
     @PostMapping("/api/login/getUserInfo")
-    @ApiOperation(value = "登录", notes = "登录")
-    @Auth(NeedLogin = false)
+    @ApiOperation(value = "获取登录用户信息", notes = "获取登录用户信息")
+    @Auth(NeedAuth = false)
     public ResponseInfo<Object> getUserInfo(Long userId) {
         return success(loginService.getUserInfo(userId));
     }

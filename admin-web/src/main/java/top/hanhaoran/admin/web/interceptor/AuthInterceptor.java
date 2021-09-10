@@ -8,11 +8,12 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import top.hanhaoran.admin.util.annotation.Auth;
 import top.hanhaoran.admin.util.redis.RedisUtil;
 import top.hanhaoran.admin.util.response.ResponseUtil;
-import top.hanhaoran.admin.web.login.LoginDetailVO;
+import top.hanhaoran.admin.web.login.LoginDetailDTO;
 import top.hanhaoran.admin.web.service.LoginService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
 
 @Component
 public class AuthInterceptor implements HandlerInterceptor {
@@ -49,16 +50,21 @@ public class AuthInterceptor implements HandlerInterceptor {
             return false;
         }
 
-        //shix
+        //验证Token过期时间
+        Date time=loginService.getTokenExpiration(xAccessToken);
+        if(time==null|| time.before(new Date())){
+            ResponseUtil.loginError(response,"Token过期");
+            return false;
+        }
 
         //根据token获取登录用户
-        Long userId= loginService.getTokenInfo(xAccessToken);
+        Long userId= loginService.getTokenId(xAccessToken);
         if (null == userId) {
             ResponseUtil.loginError(response,"用户校验失败");
             return false;
         }
 
-        LoginDetailVO loginDetailVO= (LoginDetailVO) redisUtil.get(userId.toString());
+        LoginDetailDTO loginDetailVO= (LoginDetailDTO) redisUtil.get(userId.toString());
         if(loginDetailVO==null){
             ResponseUtil.loginError(response,"用户登录信息不存在");
             return false;

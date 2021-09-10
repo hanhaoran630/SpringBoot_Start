@@ -10,7 +10,7 @@ import lombok.Data;
  * @date 2017年12月21日上午09:06:31
  */
 @Data
-public class LoginDetailVO {
+public class LoginDetailDTO {
 
     @ApiModelProperty("主键id")
     private Long id;

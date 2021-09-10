@@ -20,7 +20,7 @@
         FROM
         user e
         WHERE
-        e.username = #{loginName} and e.password = #{loginPwd}
+        e.account = #{account} and e.password = #{password}
     </select>
 
 

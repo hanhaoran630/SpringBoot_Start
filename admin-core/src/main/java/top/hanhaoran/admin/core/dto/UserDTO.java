@@ -9,5 +9,5 @@ public class UserDTO {
     private Long id;
 
     @ApiModelProperty("登录账号")
-    private String username;
+    private String account;
 }

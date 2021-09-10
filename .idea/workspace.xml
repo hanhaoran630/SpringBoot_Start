@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab27c299-61a3-44c7-87a5-d7a5ce0e3b06" name="更改" comment="1">
-      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/controller/BaseController.java" afterDir="false" />
+    <list default="true" id="ab27c299-61a3-44c7-87a5-d7a5ce0e3b06" name="更改" comment="9.8更改">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/java/top/hanhaoran/admin/core/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-core/target/classes/top/hanhaoran/admin/core/service/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/interceptor/AuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/interceptor/AuthInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginDetailVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginDetailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginFormDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginFormDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/service/LoginTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/test/java/top/hanhaoran/admin/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/test/java/top/hanhaoran/admin/SampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/target/classes/top/hanhaoran/admin/web/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/classes/top/hanhaoran/admin/web/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/target/test-classes/top/hanhaoran/admin/SampleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/target/test-classes/top/hanhaoran/admin/SampleTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="所有位置" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin-core/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../app" />
     <property name="project.structure.last.edited" value="项目" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -86,7 +98,7 @@
       <recent name="top.hanhaoran.admin.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SampleTest.testSelect">
+  <component name="RunManager" selected="应用程序.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="top.hanhaoran.admin.App" />
       <module name="admin-web" />
@@ -127,9 +139,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SampleTest.testSelect" />
         <item itemvalue="应用程序.App" />
         <item itemvalue="JUnit.SampleTest" />
+        <item itemvalue="JUnit.SampleTest.testSelect" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631007061954</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="9.8更改">
+      <created>1631070269670</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1631070269670</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,15 +225,24 @@
     <MESSAGE value="分层架构" />
     <MESSAGE value="增加redis和拦截器" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="9.8更改" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.8更改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/admin-web/src/test/java/top/hanhaoran/admin/SampleTest.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="34" />
+          <line>23</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/admin-web/src/main/java/top/hanhaoran/admin/web/login/LoginController.java</url>
+          <line>27</line>
+          <properties class="top.hanhaoran.admin.web.login.LoginController" method="login">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

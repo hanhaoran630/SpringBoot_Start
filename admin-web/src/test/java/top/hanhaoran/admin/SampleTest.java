@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import top.hanhaoran.admin.util.redis.RedisUtil;
+import top.hanhaoran.admin.web.login.LoginDetailDTO;
 
 @SpringBootTest
 public class SampleTest {
@@ -13,8 +14,14 @@ public class SampleTest {
 
     @Test
     public void testSelect() {
-        redisUtil.set("1", "1");
-        String a = (String) redisUtil.get("1");
+        LoginDetailDTO item=new LoginDetailDTO();
+        item.setId(123L);
+        item.setToken("token");
+        redisUtil.set("1", item);
+        item.setUsername("Sdfa");
+        redisUtil.set("1", item);
+        LoginDetailDTO a = (LoginDetailDTO) redisUtil.get("1");
+        System.out.println(a);
     }
 
 }

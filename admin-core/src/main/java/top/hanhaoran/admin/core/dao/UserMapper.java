@@ -10,6 +10,6 @@ import top.hanhaoran.admin.core.entity.User;
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
 
-    UserDTO login(@Param("loginName") String loginName, @Param("loginPwd") String loginPwd);
+    UserDTO login(@Param("account") String account, @Param("password") String password);
 
 }
